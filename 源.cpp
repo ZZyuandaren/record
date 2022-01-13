@@ -1,19 +1,53 @@
 #include <stdio.h>
-struct Book
-{
-	char name[20];
-	short price;
-};
+#include<string.h>
 
 int main()
 {
-	struct Book b1 = { "C语言程序设计",55};
-	printf("书名：%s\n", b1.name);
-	printf("价格：%d元\n", b1.price);
-	b1.price = 35;
-	printf("价格gaiwei：%d元\n", b1.price);
+	int i = 1;
+	while (i <= 100)
+	{
+		if (i % 2 != 0)
+			printf("%d\n", i);
+		i++;
+	}
 	return 0;
 }
+	/*int b;
+	int a=3;
+	b = a % 2;
+	if (b != 0)
+		printf("奇数\n");
+	else
+		printf("偶数\n");
+	return 0;
+}*/
+//{
+//	int age = 55;
+//	if (age < 18)
+//		printf("未成年\n");
+//	else if(age>=18 && age<=28 )
+//		printf("青年\n");
+//	else if (age >= 28 && age <= 50)
+//		printf("壮年\n");
+//	else if (age >= 50 && age <= 90)
+//		printf("老年\n");
+//	return 0;
+//}
+//struct Book
+//{
+//	char name[20];
+//	short price;
+//};
+//
+//int main()
+//{
+//	struct Book b1 = { "C语言程序设计",55};
+//	printf("书名：%s\n", b1.name);
+//	printf("价格：%d元\n", b1.price);
+//	b1.price = 35;
+//	printf("价格gaiwei：%d元\n", b1.price);
+//	return 0;
+//}
 //void jolly()
 //{
 //	printf("For he`s a jolly good follow !\n");
