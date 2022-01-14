@@ -1,17 +1,63 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include<string.h>
 
-int main()
+int main()//循环for语句练习
 {
-	int i = 1;
-	while (i <= 100)
+	int i;
+	int m;
+	for (m = 1; m < 6; m++)
 	{
-		if (i % 2 != 0)
-			printf("%d\n", i);
-		i++;
+		for (i = 0; i < m; i++)
+		{
+			printf("$");
+		}
+		printf("\n");
 	}
+		
 	return 0;
 }
+//int main()//switch语句学习
+//{
+//	int day = 0;
+//	scanf("%d", &day);
+//	switch (day)
+//	{
+//	case 1:
+//		printf("星期1\n");
+//		break;
+//	case 2:
+//		printf("星期2\n");
+//		break;
+//	case 3:
+//		printf("星期3\n");
+//		break;
+//	case 4:
+//		printf("星期4\n");
+//		break;
+//	case 5:
+//		printf("星期5\n");
+//		break;
+//	case 6:
+//		printf("星期6\n");
+//		break;
+//	case 7:
+//		printf("星期天\n");
+//		break;
+//	default:printf("输入错误\n");
+//	}
+//	return 0;
+//}
+//{
+//	int i = 1;
+//	while (i <= 100)
+//	{
+//		if (i % 2 != 0)
+//			printf("%d\n", i);
+//		i++;
+//	}
+//	return 0;
+//}
 	/*int b;
 	int a=3;
 	b = a % 2;
