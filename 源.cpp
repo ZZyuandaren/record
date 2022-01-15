@@ -2,21 +2,41 @@
 #include <stdio.h>
 #include<string.h>
 
-int main()//循环for语句练习
+int main()
 {
-	int i;
-	int m;
-	for (m = 1; m < 6; m++)
+	int re = 0;
+	char password[10] = { 0 };
+	printf("输入密码\n");
+	scanf("%s", password);
+	int ch = 0;
+	while ((ch = getchar()) != '\n')
 	{
-		for (i = 0; i < m; i++)
-		{
-			printf("$");
-		}
-		printf("\n");
+		;
 	}
-		
+	printf("请确认(Y/N)：");
+	re = getchar();
+	if (re == 'Y')
+		printf("确认\n");
+	else
+		printf("确认失败\n");
+
 	return 0;
 }
+//int main()//循环for语句练习
+//{
+//	int i;
+//	int m;
+//	for (m = 1; m < 6; m++)
+//	{
+//		for (i = 0; i < m; i++)
+//		{
+//			printf("$");
+//		}
+//		printf("\n");
+//	}
+//		
+//	return 0;
+//}
 //int main()//switch语句学习
 //{
 //	int day = 0;
