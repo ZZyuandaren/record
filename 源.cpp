@@ -4,24 +4,55 @@
 
 int main()
 {
-	int re = 0;
-	char password[10] = { 0 };
-	printf("输入密码\n");
-	scanf("%s", password);
-	int ch = 0;
-	while ((ch = getchar()) != '\n')
+	int i;
+	int n, ret=1, sum=0;
+	for (i = 1; i <= 10; i++)
 	{
-		;
+		ret = 1;
+		for (n = 1; n <=i; n++)
+		{
+			ret = ret * n;
+		}
+		sum = sum + ret;
 	}
-	printf("请确认(Y/N)：");
-	re = getchar();
-	if (re == 'Y')
-		printf("确认\n");
-	else
-		printf("确认失败\n");
-
+	printf("%d", sum);
 	return 0;
 }
+//int main()//求n的阶乘
+//{
+//	int n = 0;
+//	int a = 1;
+//	int i;
+//	scanf("%d", &n);
+//	for (i = 1; i < n; i++)
+//	{
+//		a = a * (i + 1);
+//	}
+//	printf("n的阶乘=%d", a);
+//	return 0;
+//}
+//
+//}
+//int main()
+//{
+//	int re = 0; 
+//	char password[10] = { 0 };
+//	printf("输入密码\n");
+//	scanf("%s", password);
+//	int ch = 0;
+//	while ((ch = getchar()) != '\n')
+//	{
+//		;
+//	}
+//	printf("请确认(Y/N)：");
+//	re = getchar();
+//	if (re == 'Y')
+//		printf("确认\n");
+//	else
+//		printf("确认失败\n");
+//
+//	return 0;
+//}
 //int main()//循环for语句练习
 //{
 //	int i;
