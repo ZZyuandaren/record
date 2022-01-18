@@ -2,25 +2,108 @@
 #include <stdio.h>
 #include<string.h>
 #include<windows.h>
+
 int main()
 {
-	char arr1[] = "welcome to bit!!!!!!";
-	char arr2[] = "####################";
-	int left = 0;
-	int right = sizeof(arr1) / sizeof(arr1[0]) - 2;
-	while(left<=right)
-	{ 
-		arr2[left] = arr1[left];
-		arr2[right] = arr1[right];
-		printf("%s\n", arr2);
-		//停一秒
-		Sleep(1000);
-		right--;
-		left++;
-	}
-	return 0;
+	int i, count=0;
+	for (i = 100; i <= 200; i++)
+	{
+		int j;
+		for (j = 2; j < i/2; j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j>i/2)
+		{
+			count++;
+			printf("%d\n", i);
 
+		}
+	}
+	printf("%d\n", count);
+	return 0;
 }
+//int main()
+//{
+//	int a, b,n;
+//	scanf("%d%d", &a, &b);
+//	if (a < b)
+//	{
+//		int tam = 0;
+//		tam = b;
+//		b = a;
+//		a = tam;
+//	}
+//	while (a % b != 0)
+//	{
+//		n = a % b;
+//		a = b;
+//		b = n;
+//	}
+//	printf("%d", b);
+//	return 0;
+//}
+//int main()
+//{
+//	int i,a;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 3 == 0)
+//			printf("三的倍数：%d\n", i);
+//	}
+//
+//	return 0;
+//}
+//int main()//比大小
+//{
+//	int a, b, c,d;//a b c 
+//	scanf("%d%d%d", &a, &b, &c);
+//	if (a<b)
+//	{
+//		int tem = 0;
+//		tem = b;
+//		b = a;
+//		a = tem;
+//	}
+//	if (a < c)
+//	{
+//		int tem = 0;
+//		tem = c;
+//		c = a;
+//		a = tem;
+//	}
+//	if (b < c)
+//	{
+//		int tem = 0;
+//		tem = c;
+//		c = b;
+//		b = tem;
+//	}
+//	printf("%d %d %d", a, b, c);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr1[] = "welcome to bit!!!!!!";
+//	char arr2[] = "####################";
+//	int left = 0;
+//	int right = sizeof(arr1) / sizeof(arr1[0]) - 2;
+//	while(left<=right)
+//	{ 
+//		arr2[left] = arr1[left];
+//		arr2[right] = arr1[right];
+//		printf("%s\n", arr2);
+//		//停一秒
+//		Sleep(1000);
+//		right--;
+//		left++;
+//	}
+//	return 0;
+//
+//}
 //int main()//   二分法
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11 };
