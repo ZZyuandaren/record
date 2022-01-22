@@ -3,29 +3,93 @@
 #include<string.h>
 #include<windows.h>
 
+void swap(int *pa, int *pb)//指针和自定义函数运用
+{
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}
 int main()
 {
-	int i, count=0;
-	for (i = 100; i <= 200; i++)
-	{
-		int j;
-		for (j = 2; j < i/2; j++)
-		{
-			if (i % j == 0)
-			{
-				break;
-			}
-		}
-		if (j>i/2)
-		{
-			count++;
-			printf("%d\n", i);
-
-		}
-	}
-	printf("%d\n", count);
+	int a = 10, b = 20;
+	printf("%d %d\n", a, b);
+	swap(&a,&b);
+	printf("%d %d\n", a, b);
 	return 0;
 }
+//int main()
+//{
+//	char arr1[] = "bit";
+//	char arr2[20] = "####";
+//	strcpy(arr2, arr1);
+//	printf("%s%s", arr1, arr2);
+//	return 0;
+//}
+//int main()//打印乘法表
+//{
+//	int i, j;
+//	for (i = 1; i < 10; i++)
+//	{
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%-2d ", i, j, i * j);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { -1,2,3,4,-5,6,7,8,9 ,38,47};
+//	int max=arr[0],i;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 1; i < sz; i++)
+//	{
+//		if (arr[i] > max)
+//			max = arr[i];
+//
+//	}
+//	printf("%d", max);
+//	return 0;
+//}
+//int main()
+//{
+//	double sum=0;
+//	int i=0;
+//	int n = 1;
+//	for (i = 1; i < 101; i++)
+//	{
+//		sum += n*1.0 / i;
+//		n = -n;
+//	}
+//	printf("%lf", sum);
+//	return 0;
+//}
+//int main()
+//{
+//	int i, count=0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		int j;
+//		for (j = 2; j < i/2; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (j>i/2)
+//		{
+//			count++;
+//			printf("%d\n", i);
+//
+//		}
+//	}
+//	printf("%d\n", count);
+//	return 0;
+//}
 //int main()
 //{
 //	int a, b,n;
