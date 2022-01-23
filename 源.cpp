@@ -3,21 +3,72 @@
 #include<string.h>
 #include<windows.h>
 
-void swap(int *pa, int *pb)//指针和自定义函数运用
+int search(int arr[], int k,int sz)
 {
-	int tmp = 0;
-	tmp = *pa;
-	*pa = *pb;
-	*pb = tmp;
+	int left = 0;
+	int right = sz;
+	while (left<=right)
+	{
+		int mid=0;
+		mid = (left + right) / 2;
+		if (arr[mid] < k)
+		{
+			left = mid+1;
+		}
+		else if (arr[mid] > k)
+		{
+			right = mid-1;
+		}
+		else
+		{
+			return mid;
+		}
+	}
+	return -1;
 }
 int main()
 {
-	int a = 10, b = 20;
-	printf("%d %d\n", a, b);
-	swap(&a,&b);
-	printf("%d %d\n", a, b);
+	int arr[] = { 1,2,3,4,5,6,7,8,9 ,10};
+	int k=7;
+	int sz = sizeof(arr) / sizeof(arr[0]) - 1;
+	int ret =search(arr, k,sz);
+	if (ret == -1)
+		printf("找不到");
+	else
+		printf("找到了，下标是：%d\n", ret);
 	return 0;
 }
+//int pd(int x)
+//{
+//	if((x%4==0&&x%100!=0)||(x%400==0))
+//		return 1;
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	int year=0;
+//	scanf("%d", &year);
+//	if (pd(year) == 1)
+//		printf("闰年%d", year);
+//	else
+//		printf("不是闰年");
+//	return 0;
+//}
+//void swap(int *pa, int *pb)//指针和自定义函数运用
+//{
+//	int tmp = 0;
+//	tmp = *pa;
+//	*pa = *pb;
+//	*pb = tmp;
+//}
+//int main()
+//{
+//	int a = 10, b = 20;
+//	printf("%d %d\n", a, b);
+//	swap(&a,&b);
+//	printf("%d %d\n", a, b);
+//}
 //int main()
 //{
 //	char arr1[] = "bit";
