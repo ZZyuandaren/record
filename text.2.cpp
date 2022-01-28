@@ -2,21 +2,56 @@
 #include<stdio.h>
 #include<string.h>
 
-int main()//数组的学习和应用
+void bubble_sort(int arr[],int sz)
 {
-	int arr[3][4] = { {1,2,3},{4,5 },{7} };
-	int i;
-	for (i = 0; i < 3; i++)
+	int flag = 1;
+	int i ;
+	for (i = 0; i < sz-1; i++)
 	{
 		int j;
-		for (j = 0; j < 4; j++)
+		for (j = 0; j <sz-i ; j++)
 		{
-			printf("&arr[%d][%d]= %p\n",i,j, &arr[i][j]);
+			if (arr[j] > arr[j + 1])
+			{
+				int tem = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tem;
+				flag = 0;
+			}
+			
 		}
-		
+		if (flag != 0)
+			break;
+	}
+}
+int main()
+{
+	int arr[] = {76,45,9,8,7,6,5,4,3,2,1,0};
+//对arr排序；
+	int i=0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bubble_sort(arr,sz);
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
 	}
 	return 0;
 }
+//int main()//数组的学习和应用
+//{
+//	int arr[3][4] = { {1,2,3},{4,5 },{7} };
+//	int i;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j;
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("&arr[%d][%d]= %p\n",i,j, &arr[i][j]);
+//		}
+//		
+//	}
+//	return 0;
+//}
 //int main()//数组的学习和应用
 //{
 //	int arr[3][4] = { {1,2,3},{4,5 },{7} };
