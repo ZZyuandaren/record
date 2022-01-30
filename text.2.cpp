@@ -1,42 +1,91 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
+#include"game.h"
 
-void bubble_sort(int arr[],int sz)
+
+void game()
 {
-	int flag = 1;
-	int i ;
-	for (i = 0; i < sz-1; i++)
+	//数组——放棋盘信息
+	char board[ROW][COL] = { 0 };
+	InitBoard(board, ROW, COL);
+		//打印棋盘
+		Displayboard(board,ROW,COL);
+
+}
+void menu()
+{
+	printf("****************************\n");
+	printf("***1 ,开始游戏 0 ,退出游戏***\n");
+	printf("****************************\n");
+}
+
+void text()
+{
+	int input = 0;
+	do
 	{
-		int j;
-		for (j = 0; j <sz-i ; j++)
+		
+		menu();
+		printf("请选择：\n");
+		scanf("%d", &input);
+		switch (input)
 		{
-			if (arr[j] > arr[j + 1])
-			{
-				int tem = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = tem;
-				flag = 0;
-			}
-			
+			case 1:
+				printf("三子棋\n");
+				game();
+				break;
+			case 0:
+				printf("退出游戏\n");
+					break;
+			default:
+				printf("选择错误,请重新选择！\n");
+				break;
+				
 		}
-		if (flag != 0)
-			break;
-	}
+
+	} while (input);
 }
 int main()
 {
-	int arr[] = {76,45,9,8,7,6,5,4,3,2,1,0};
-//对arr排序；
-	int i=0;
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	bubble_sort(arr,sz);
-	for (i = 0; i < sz; i++)
-	{
-		printf("%d ", arr[i]);
-	}
+	text();
 	return 0;
 }
+//void bubble_sort(int arr[],int sz)
+//{
+//	int flag = 1;
+//	int i ;
+//	for (i = 0; i < sz-1; i++)
+//	{
+//		int j;
+//		for (j = 0; j <sz-i ; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				int tem = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = tem;
+//				flag = 0;
+//			}
+//			
+//		}
+//		if (flag != 0)
+//			break;
+//	}
+//}
+//int main()
+//{
+//	int arr[] = {76,45,9,8,7,6,5,4,3,2,1,0};
+////对arr排序；
+//	int i=0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	bubble_sort(arr,sz);
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
 //int main()//数组的学习和应用
 //{
 //	int arr[3][4] = { {1,2,3},{4,5 },{7} };
