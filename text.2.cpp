@@ -10,8 +10,42 @@ void game()
 	char board[ROW][COL] = { 0 };
 	InitBoard(board, ROW, COL);
 		//打印棋盘
-		Displayboard(board,ROW,COL);
+	Displayboard(board,ROW,COL);
+		//下棋
+	char ret;
+		while (1)
+		{
+			//玩家下
+			playerMove(board, ROW, COL);
+			Displayboard(board, ROW, COL);
+			//判断输赢
+			 ret =iswin(board, ROW, COL);
+			if (ret != 'd')
+			{
+				break;
+			}
+			//电脑下
+			computermove(board, ROW, COL);
+			Displayboard(board, ROW, COL);
+			if (ret != 'd')
+			{
+				break;
+			}
+			
+		}
 
+		if (ret == '*')
+		{
+			printf("玩家赢\n");
+		}
+		else if (ret == '#')
+		{
+			printf("电脑赢\n");
+		}
+		else
+		{
+			printf("平局\n");
+		}
 }
 void menu()
 {
@@ -23,6 +57,7 @@ void menu()
 void text()
 {
 	int input = 0;
+	srand((unsigned int)time(NULL));
 	do
 	{
 		
@@ -41,7 +76,6 @@ void text()
 			default:
 				printf("选择错误,请重新选择！\n");
 				break;
-				
 		}
 
 	} while (input);
