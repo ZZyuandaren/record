@@ -3,14 +3,7 @@
 
 int main()
 {
-	int a[10] = { 0 };
-	int i = 0;
-	int* p = a;
-	for (i = 0; i <= 12; i++)
-	{
-		*p = i;
-		p++;
-	}
+	
 	return 0;
 }
  
