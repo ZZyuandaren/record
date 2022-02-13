@@ -1,16 +1,71 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
- 
+
 int main()
 {
-	int age = 0;
-	printf("请输入年龄");
-	scanf("%d", &age);
-	long long maosu = 0;
-	maosu = age * 31560000;
-	printf("%lld", maosu);
+	int a[10] = { 0 };
+	int i = 0;
+	int* p = a;
+	for (i = 0; i <= 12; i++)
+	{
+		*p = i;
+		p++;
+	}
 	return 0;
 }
+ 
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int* p = arr;
+//	int i=0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*p = 1;
+//		p += 1;
+//		
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int input = 0;
+//	while (input>=0)
+//	{
+//		printf("请输入时间（单位分钟）：\n");
+//		scanf("%d", &input);
+//		if (input > con)
+//		{
+//			printf("小时：%d分钟:%d\n", input % con, input / con);
+//		}
+//		else
+//			printf("分钟：%d\n", input);
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	char c1, c2;
+//	int diff;
+//	float num;
+//	c1 = 's';
+//	c2 = 'o';
+//	diff = c1 - c2;
+//	num = diff;
+//	printf("%c%c%c:%d%3.2f\n", c1, c2, c1, diff, num);
+//	return 0;
+//}
+//int main()
+//{
+//	int age = 0;
+//	printf("请输入年龄");
+//	scanf("%d", &age);
+//	long long maosu = 0;
+//	maosu = age * 31560000;
+//	printf("%lld", maosu);
+//	return 0;
+//}
 //int main()
 //{
 //	int a = 0x11223344;
