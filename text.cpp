@@ -3,9 +3,38 @@
 
 int main()
 {
-	
+
 	return 0;
 }
+//int main()
+//{
+//	int a = 4,b=5,c=9;
+//	int* arr[] = { &a,&b,&c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf(" % d", *(arr[i]));
+//	}
+//	return 0;
+//}
+
+//int my_strlen(char*str)
+//{
+//	char* start=str;
+//	char* end = str;
+//	while (*end != '\0')
+//	{
+//		end++;
+//	}
+//	return end - start;
+//}
+//int main()
+//{
+//	char arr[] = "bit";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
  
 //int main()
 //{
